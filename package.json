@@ -1,0 +1,17 @@
+{
+  "name": "pageobjects27june",
+  "version": "1.0.0",
+  "description": "page object model pattern for automation of web application",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "ATT24June",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "12.5",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
+  }
+}
