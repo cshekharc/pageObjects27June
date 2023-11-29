@@ -36,3 +36,15 @@ Cypress.Commands.add("loginWithCookie",()=>{
     cy.reload()
     cy.get('.top.menu_account').should('include.text', 'Welcome back csc')
 })
+
+Cypress.Commands.add('isVisible',(selector)=>{
+    cy.get(selector).should('be.visible')
+})
+
+Cypress.Commands.add('isExist',(selector)=>{
+    cy.get(selector).should('be.exist')
+})
+
+Cypress.Commands.add('pauseFor',(milisec)=>{
+    cy.wait(milisec)
+})

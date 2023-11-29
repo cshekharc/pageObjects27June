@@ -30,9 +30,10 @@ describe("visiting the automation test store site", () => {
         cy.validateCheckoutPage()
     })
 
-    // it(" Add to cart product from Book page", () => {
-    //     cy.clickonBooksTab()
-    //     cy.validatingProductsOnBooksPage()
-    //     cy.validateOutofStockProductonBooksPage()
-    // })
+    it(" Add to cart product from Book page", () => {
+        cy.clickonBooksTab()
+        cy.pauseFor(3000)
+        cy.validatingProductsOnBooksPage()
+        cy.validateOutofStockProductonBooksPage()
+    })
 })
