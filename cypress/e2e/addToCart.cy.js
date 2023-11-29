@@ -7,7 +7,8 @@ describe("visiting the automation test store site", () => {
         })
     })
     beforeEach(()=>{
-        cy.visitUrl()
+        // cy.visitUrl()
+        cy.loginWithCookie()
     })
     // it('validating number of products',() => {
     //     cy.clickHairCareTab()
@@ -22,7 +23,7 @@ describe("visiting the automation test store site", () => {
     })
 
     it(" Add to cart product from Makeup page", () => {
-        cy.login(Cypress.env("userName"),Cypress.env("password"))
+        //cy.login(Cypress.env("userName"),Cypress.env("password"))
         cy.clickOnMakeupTab()
         cy.validateproductonMakeup(product.productName)
         cy.clickonMakeupProduct(product.productName)

@@ -27,3 +27,12 @@
 Cypress.Commands.add("visitUrl",()=>{
     cy.visit("/")
 })
+
+Cypress.Commands.add("loginWithCookie",()=>{
+    cy.visit("/")
+    //cy.login()
+    //cy.getCookie()
+    cy.setCookie('customer','RGVTYVg4UmdydUZLSkFza2Nza0ViZzFqc1ZLRlB4dDA4Wld2MWdRTFhNYyt3akFTUWhMcWswNEgxYTh2RVZuUEZzUUFoVXFxTFB6RU5Kb0ljYWh2RnM4OWRnOU9rSUdoaHgyK2ZkVzNBV2s4Z3ZLUmZBcjZVbDkvaDVMSGxSQXNzdzhXYlRqZE9DSFpBUkxhdm83eHNBPT06On58SlQKB8K_wicMflIzOck%3D')
+    cy.reload()
+    cy.get('.top.menu_account').should('include.text', 'Welcome back csc')
+})
