@@ -1,38 +1,36 @@
-name: parallel tests execution
+name: Cypress Parallel execution
+
 on: [push, pull_request]
+
 jobs:
   cypress-chrome:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-        name: Install dependencies
-        run: | 
-          npm install
+    - name: Install dependencies
+      run: |
+        npm install
 
-        name: Run cypress on chrome
-        run: | 
-          npm run cy:run --browser chrome
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
+    - name: Run Cypress tests on Chrome
+      run: |
+        npm run cy:run -- --browser chrome
 
   cypress-firefox:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-        name: Install dependencies
-        run: | 
-          npm install
+    - name: Install dependencies
+      run: |
+        npm install
 
-        name: Run cypress on firefox
-        run: | 
-          npm run cy:run --browser firefox
-          
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
+    - name: Run Cypress tests on Firefox
+      run: |
+        npm run cy:run -- --browser firefox
 
       
