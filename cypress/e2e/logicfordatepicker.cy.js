@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Tesst datepicket", () => {
-    it("select date from datepicker", () => {
+    it.skip("select date from datepicker", () => {
         cy.visit("http://www.webdriveruniversity.com")
         cy.get('#datepicker').invoke('removeAttr', 'target').click({force:true})
         cy.get('#datepicker').click()

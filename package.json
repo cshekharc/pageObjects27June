@@ -4,8 +4,9 @@
   "description": "page object model pattern for automation of web application",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:run:chrome":"cypress run --browser chrome",
+    "cy:run:firefox":"cypress run --browser firefox"
   },
   "author": "ATT24June",
   "license": "ISC",

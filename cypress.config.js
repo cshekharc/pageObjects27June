@@ -27,8 +27,10 @@ module.exports = defineConfig({
     env:{
       userName: "username",
       password: "passWord",
-    }
+    },
+    experimentalRunAllSpecs: true,
   },
+  
   watchForFileChanges: false,
   video: false
 });
