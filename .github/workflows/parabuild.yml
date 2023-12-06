@@ -33,4 +33,11 @@ jobs:
       run: |
         npm run cy:run -- --browser firefox
 
+     - name: Cypress Test Report
+      if: always()
+      uses: actions/upload-artifact@v3 
+      with:
+        name: Mochawesome HTML Report
+        path: cypress/reports/html     
+
       
