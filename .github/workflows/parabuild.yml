@@ -7,10 +7,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         name: Install dependencies
-        command: 
+        run: | 
           npm install
         name: Run cypress on chrome
-        commnad: 
+        run: | 
           npm run cy:run --browser chrome
       - name: Cypress run
         uses: cypress-io/github-action@v5
@@ -21,10 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         name: Install dependencies
-        command: 
+        run: | 
           npm install
         name: Run cypress on firefox
-        command: 
+        run: | 
           npm run cy:run --browser firefox
       - name: Cypress run
         uses: cypress-io/github-action@v5
