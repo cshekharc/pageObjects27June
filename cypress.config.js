@@ -29,6 +29,7 @@ module.exports = defineConfig({
       password: "passWord",
     },
     experimentalRunAllSpecs: true,
+    // testIsolation : false
   },
   
   watchForFileChanges: false,
